@@ -1,75 +1,79 @@
 * {
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
 }
 
-header {
-    background-color: #ad5555;
-    grid-area: header;
+div {
+    background-color: #f33;
+    color: #fff;
+    font-size: 3em;
+    /* display: flex;
+    align-items: center;
+   justify-content: center; */
+    /* display: grid;
+  place-content: center; */
+    display: grid;
+    place-items: center;
+    /* justify-items: center;
+  align-items: center; */
 }
 
-aside {
-    background-color: #4d8e74;
-    grid-area: aside;
+section {
+    display: grid;
+    gap: 3px;
+    height: 100vh;
+    /* grid-template-columns:100px 100px 100px; */
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(5, 100px);
+    /* justify-content: center;
+    align-content: center; */
+    place-content: center;
 }
 
-main {
-    background-color: #774c7f;
-    grid-area: main;
+.class-1 {
+    /* grid-column-start: 1;
+  grid-column-end: 3; */
+    grid-column: span 2;
+    grid-row: 1/2;
+    background: url('https://picsum.photos/id/1060/200');
 }
 
-footer {
-    background-color: #537a47;
-    grid-area: footer;
+.class-4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background: url('https://picsum.photos/id/1010/200');
+    background-position: center;
 }
 
-body {
-  height: 100vh;
-  display: grid;
+.class-3 {
+    /* grid-row-start: 2;
+  grid-row-end: 5; */
+    grid-row: 2 / 5;
+    background: url('https://picsum.photos/id/1056/200');
+    background-position: center;
 }
 
-@media (min-width: 1600px) {
-    body {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 100px 1fr 200px;
-        grid-template-areas:
-            'header header header'
-            'aside      main      main'
-            'footer  footer   footer';
-    }
+.class-9 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: url('https://picsum.photos/id/1014/200');
+    background-position: center;
 }
 
-
-@media screen and (min-width: 700px) and (max-width: 1200px) {
-    body {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 1fr 200px;
-        grid-template-areas:
-            'header header'
-            'aside      main'
-            'aside  footer';
-    }
+.class-8 {
+    /* grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 4; */
+    grid-column: 3 /4;
+    grid-row: 4/ 6;
+    background: url('https://picsum.photos/id/1067/200');
+    background-position: center;
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
-  body {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px 1fr 200px;
-      grid-template-areas:
-          'header header'
-          'aside      main'
-          'aside  footer';
-  }
-}
-
-@media (max-width: 700px) {
-  body {
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 1fr 200px;
-    grid-template-areas:
-        'header'
-        'main'
-        'aside'  
-        'footer';
-}
-}
+/* img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+} */
