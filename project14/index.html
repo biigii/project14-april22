@@ -9,19 +9,22 @@
         <script src="./assets/js/main.js" defer></script>
         <title>project 14</title>
     </head>
-    <body>
-      <section>
-        <div class="class-1">
-          <!-- <img src="https://picsum.photos/id/1060/200" alt=""> -->
-        </div>
-        <div class="class-2">2</div>
-        <div class="class-3">3</div>
-        <div class="class-4">4</div>
-        <div class="class-5">5</div>
-        <div class="class-6">6</div>
-        <div class="class-7">7</div>
-        <div class="class-8">8</div>
-        <div class="class-9">9</div>
-      </section>
+    <body onresize="bodyResized()">
+        <input id="input" type="text" data-input />
+        <button onclick="typeSomething()">click</button>
+        <hr />
+        <input type="text" data-item />
+        <button onclick="addItem()">add item</button>
+        <ul data-list></ul>
+        <hr>
+        <input data-theme type="color" onchange="changeTheme()">
+        <hr>
+        <input type="password" data-type onkeyup="printSomething()">
+        your password is:
+        <label data-label></label>
+        <hr>
+        <ol data-fruits></ol>
+        <hr>
+        <figure data-figure></figure>
     </body>
 </html>
